@@ -39,17 +39,6 @@ public class EnglishDictionaryService {
         engRuRepository.deleteByKey(deleteWord);
     }
 
-    public void updateById(Long id, EnglishWord englishWord) {
-        EnglishWord wordToUpdate = engRuRepository.getById(id).orElseThrow(EnglishWordNotFoundException::new);
-        wordToUpdate.setWord(englishWord.getWord());
-        wordToUpdate.setEnglishTranslateWords(englishWord.getEnglishTranslateWords());
-        engRuRepository.update(wordToUpdate);
-    }
-
-    public void deleteById(Long id) {
-        engRuRepository.deleteById(id);
-    }
-
     public void update(EnglishWord englishWord) {
         engRuRepository.update(englishWord);
     }

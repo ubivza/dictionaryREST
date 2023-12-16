@@ -121,8 +121,7 @@ public class EngRuDictRESTController {
     private EnglishWord convertToBaseEntity(EnglishWordDTO englishWordDTO) {
         EnglishWord englishWord = modelMapper.map(englishWordDTO, EnglishWord.class);
         englishWord.setEnglishTranslateWords(englishWordDTO.getEnglishTranslateWordList()
-                .stream()
-                .map(value -> convertToChildEntity(value, englishWord))
+                .stream().map(value -> convertToChildEntity(value, englishWord))
                 .collect(Collectors.toList()));
         return englishWord;
     }
