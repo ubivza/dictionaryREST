@@ -1,1 +1,1 @@
-REST + conteinerised PostgreSQL version of https://github.com/ubivza/dictionaryWeb task
+REST + conteinerized PostgreSQL version of https://github.com/ubivza/dictionaryWeb task
